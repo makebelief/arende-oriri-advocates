@@ -686,3 +686,12 @@ h2 span{color:var(--ao-purple-deep)}
 .contact-copy>p:not(.eyebrow){color:var(--ao-muted,#6F686F)}
 .contact-list strong,.contact-list a{color:var(--ao-ink,#2D2A2F)}
 /* === ARENDE FINAL THREE FIXES END === */
+
+
+/* KEVIN ARENDE ORIRI PORTRAIT — HOMEPAGE */
+.team-feature-image img[src$="kevin-arende-oriri.jpg"]{
+  object-fit:cover;
+  object-position:center 18%;
+}
+/* CLIENT-READY KEVIN PORTRAIT */
+.team-feature-image img[src$="kevin-arende-oriri.webp"]{object-fit:cover;object-position:center 16%;}

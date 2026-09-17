@@ -211,3 +211,12 @@
   color:rgba(255,255,255,.82);
 }
 /* === ARENDE PAGE HERO VISIBILITY FIX V2 END === */
+
+
+/* KEVIN ARENDE ORIRI PORTRAIT — ADVOCATE PAGE */
+.profile-large-image img[src$="kevin-arende-oriri.jpg"]{
+  object-fit:cover;
+  object-position:center 14%;
+}
+/* CLIENT-READY KEVIN PORTRAIT */
+.profile-large-image img[src$="kevin-arende-oriri.webp"]{object-fit:cover;object-position:center 14%;}

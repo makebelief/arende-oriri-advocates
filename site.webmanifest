@@ -1,15 +1,17 @@
 {
   "name": "Arende Oriri & Associates Advocates",
   "short_name": "Arende Oriri",
-  "description": "Independent consultancy, mediation and arbitration.",
+  "description": "Human rights and public-interest legal practice in Nairobi, Kenya.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#062C56",
-  "icons": [{
-    "src": "/images/arende-oriri-mark.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "any"
-  }]
+  "background_color": "#FFF6ED",
+  "theme_color": "#8B4AB0",
+  "icons": [
+    {
+      "src": "/images/arende-oriri-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }

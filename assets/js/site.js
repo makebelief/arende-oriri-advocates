@@ -62,8 +62,11 @@ enquiryForm?.addEventListener('submit', (event) => {
     `${data.get('enquiry') || ''}`,
   ].join('\n');
 
-  if (status) status.textContent = 'Opening your email app with the enquiry details prepared.';
-  window.location.href = `mailto:nerogawali@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  if (status) status.textContent = 'Opening WhatsApp with your enquiry details prepared.';
+  const whatsappMessage = `Hello Arende Oriri & Associates Advocates,
+
+${body}`;
+  window.open(`https://wa.me/254722948247?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer');
 });
 
 const brandFilm = document.querySelector("[data-brand-film]");
@@ -111,15 +114,21 @@ motionToggle?.addEventListener("click", () => {
 const contactRail = document.createElement('aside');
 contactRail.className = 'contact-rail is-expanded';
 contactRail.id = 'contact-rail';
-contactRail.setAttribute('aria-label', 'Quick contact actions');
+contactRail.setAttribute('aria-label', 'Quick contact and social actions');
 contactRail.innerHTML = `
   <button class="rail-action rail-toggle" type="button" aria-expanded="true" aria-controls="contact-rail" aria-label="Collapse quick contact actions" title="Collapse quick contact actions">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
   </button>
-  <a class="rail-action rail-whatsapp" href="https://wa.me/254117233635?text=Hello%20Arende%20Oriri%20%26%20Associates%20Advocates%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Start a WhatsApp conversation" title="WhatsApp">
+  <a class="rail-action rail-whatsapp" href="https://wa.me/254722948247?text=Hello%20Arende%20Oriri%20%26%20Associates%20Advocates%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Arende Oriri & Associates Advocates" title="WhatsApp +254 722 948 247">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" /><path d="M9 8.5c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.6 1.4c.1.2.1.4-.1.6l-.5.6c.6 1.1 1.5 1.8 2.6 2.3l.6-.6c.2-.2.4-.2.6-.1l1.3.6c.3.1.4.3.3.6-.2.7-.8 1.2-1.5 1.3-1.2.1-2.7-.6-4.1-1.8-1.2-1-2.2-2.5-2.6-3.5-.3-.7-.2-1 .2-1.4Z" /></svg>
   </a>
-  <a class="rail-action rail-phone" href="tel:+254117233635" aria-label="Call Arende Oriri and Associates Advocates" title="Call +254 117 233 635">
+  <a class="rail-action rail-linkedin" href="https://ke.linkedin.com/in/kevin-arende-oriri-1a3647377" target="_blank" rel="noopener noreferrer" aria-label="Kevin Arende Oriri on LinkedIn" title="LinkedIn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5V18M6.5 6.5v.1M10.5 18v-8.5M10.5 13c.8-2.5 6-3 6 1v4M16.5 13.5V18" /></svg>
+  </a>
+  <a class="rail-action rail-x" href="https://x.com/arendeoriri" target="_blank" rel="noopener noreferrer" aria-label="Kevin Arende Oriri on X" title="X / Twitter">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" /></svg>
+  </a>
+  <a class="rail-action rail-phone" href="tel:+254722948247" aria-label="Call Arende Oriri & Associates Advocates" title="Call +254 722 948 247">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 9.5 4l1.3 4-1.8 1.5a12 12 0 0 0 5.5 5.5l1.5-1.8 4 1.3-.5 2.5c-.2 1-1 1.6-2 1.5C10 17.8 6.2 14 5 6.5c-.1-1 .5-1.8 1.5-2Z" /></svg>
   </a>`;
 const contactRailHost = document.querySelector('.hero, .page-hero');
