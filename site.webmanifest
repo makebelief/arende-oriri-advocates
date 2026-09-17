@@ -1,13 +1,13 @@
 {
-  "name": "Nero & Partners",
-  "short_name": "Nero & Partners",
+  "name": "Arende Oriri & Associates Advocates",
+  "short_name": "Arende Oriri",
   "description": "Independent consultancy, mediation and arbitration.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#062C56",
   "icons": [{
-    "src": "/images/nero-icon-512.png",
+    "src": "/images/arende-oriri-mark.png",
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "any"

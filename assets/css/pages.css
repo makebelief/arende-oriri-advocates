@@ -1,6 +1,6 @@
 /* Multi-page practice layouts. The core visual system lives in site.css. */
 .page-hero{position:relative;min-height:58vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy);color:#fff}
-.page-hero::before{content:'';position:absolute;inset:0;background:rgba(6,44,86,.68)}
+.page-hero::before{content:'';position:absolute;inset:0;background:rgba(91,87,90,.68)}
 .page-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.65) contrast(1.05)}
 .page-hero-content{position:relative;z-index:1;width:min(calc(100% - 64px),var(--max));margin:0 auto;padding:130px 0 82px}
 .page-hero h1{max-width:800px;margin-top:22px;color:#fff;font-size:clamp(48px,7vw,92px);line-height:.92;letter-spacing:-.09em}
@@ -34,7 +34,7 @@
 .service-detail small{display:block;margin-top:14px;color:var(--navy);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .profile-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .profile-large{background:#fff;border:1px solid var(--line)}
-.profile-large-image{height:360px;overflow:hidden;background:#dce4ea}
+.profile-large-image{height:360px;overflow:hidden;background:#E8D9CB}
 .profile-large-image img{height:100%;object-fit:cover;object-position:center}
 .profile-large-copy{padding:24px}
 .profile-large-copy h3{margin-top:12px;font-size:25px;letter-spacing:-.05em}
@@ -102,8 +102,8 @@
 .service-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
 .service-photo-card{display:flex;min-width:0;flex-direction:column;gap:0;padding:0;border:1px solid var(--line);background:#fff;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease}
 .service-photo-card:last-child{border-bottom:1px solid var(--line)}
-.service-photo-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px rgba(6,44,86,.08)}
-.service-detail-image{height:185px;overflow:hidden;background:#dce4ea}
+.service-photo-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px rgba(91,87,90,.08)}
+.service-detail-image{height:185px;overflow:hidden;background:#E8D9CB}
 .service-detail-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.62);transition:transform .35s ease,filter .35s ease}
 .service-photo-card:hover .service-detail-image img{transform:scale(1.035);filter:saturate(.78)}
 .service-detail-body{display:flex;min-height:355px;flex:1;flex-direction:column;padding:24px}
@@ -116,8 +116,8 @@
 
 .principle-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .detail-photo-card{padding:0;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease}
-.detail-photo-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px rgba(6,44,86,.08)}
-.detail-card-image{height:165px;overflow:hidden;background:#dce4ea}
+.detail-photo-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px rgba(91,87,90,.08)}
+.detail-card-image{height:165px;overflow:hidden;background:#E8D9CB}
 .detail-card-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.55);transition:transform .35s ease,filter .35s ease}
 .detail-photo-card:hover .detail-card-image img{transform:scale(1.035);filter:saturate(.72)}
 .detail-card-copy{padding:26px}
@@ -133,8 +133,8 @@
 .service-editorial-card:nth-child(even){grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr)}
 .service-editorial-card:nth-child(even) .service-detail-image{order:2}
 .service-editorial-card:nth-child(even) .service-detail-body{order:1}
-.service-editorial-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(6,44,86,.08)}
-.service-editorial-card .service-detail-image{height:auto;min-height:330px;overflow:hidden;background:#dce4ea}
+.service-editorial-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(91,87,90,.08)}
+.service-editorial-card .service-detail-image{height:auto;min-height:330px;overflow:hidden;background:#E8D9CB}
 .service-editorial-card .service-detail-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.66);transition:transform .45s ease,filter .35s ease}
 .service-editorial-card:hover .service-detail-image img{transform:scale(1.025);filter:saturate(.8)}
 .service-editorial-card .service-detail-body{display:flex;min-height:330px;flex-direction:column;justify-content:center;padding:46px 48px}
@@ -147,8 +147,8 @@
 
 .principle-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .principle-feature-card{padding:0;overflow:hidden;background:#fff;transition:transform .22s ease,box-shadow .22s ease}
-.principle-feature-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(6,44,86,.08)}
-.principle-feature-card .detail-card-image{height:255px;overflow:hidden;background:#dce4ea}
+.principle-feature-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(91,87,90,.08)}
+.principle-feature-card .detail-card-image{height:255px;overflow:hidden;background:#E8D9CB}
 .principle-feature-card .detail-card-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.62);transition:transform .4s ease,filter .35s ease}
 .principle-feature-card:hover .detail-card-image img{transform:scale(1.025);filter:saturate(.77)}
 .principle-feature-card .detail-card-copy{padding:32px 34px 36px}
@@ -169,3 +169,15 @@
   .principle-feature-grid{grid-template-columns:1fr}
   .principle-feature-card .detail-card-image{height:235px}
 }
+
+
+/* ARENDE ORIRI MULTI-PAGE — COLOR ONLY */
+.page-hero{background:var(--charcoal)}
+.page-hero::before{background:linear-gradient(90deg,rgba(91,87,90,.80),rgba(91,87,90,.42))}
+.page-kicker::before{background:var(--gold)}
+.page-hero h1 span{color:var(--gold)}
+.page-main.grey{background:var(--ivory)}
+.detail-card .eyebrow,.check-list span,.service-detail-number,.profile-large-copy .eyebrow,.policy-copy h3,.policy-note strong,.process-steps strong,.topic-list span{color:var(--purple)}
+.contact-panel-row span{color:var(--purple)}
+.map-meta{background:var(--charcoal)}
+.error-page,.error-header,.error-main,.error-footer{background:var(--charcoal)}

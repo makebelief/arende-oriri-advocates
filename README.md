@@ -1,6 +1,6 @@
-# Nero & Partners
+# Arende Oriri & Associates Advocates
 
-Production-ready single-page site for Nero & Partners, an independent consultancy, mediation and arbitration practice. The information architecture is organised as anchor sections so the full practice story is accessible from one focused landing page.
+Production-ready single-page site for Arende Oriri & Associates Advocates, an independent consultancy, mediation and arbitration practice. The information architecture is organised as anchor sections so the full practice story is accessible from one focused landing page.
 
 ## Structure
 

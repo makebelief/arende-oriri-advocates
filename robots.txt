@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nero-and-partners.vercel.app/sitemap.xml
+Sitemap: https://arende-oriri-advocates.vercel.app/sitemap.xml

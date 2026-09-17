@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nero-and-partners.vercel.app/sitemap.xml
