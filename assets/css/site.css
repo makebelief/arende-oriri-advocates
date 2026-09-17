@@ -384,309 +384,305 @@ h2 span{color:var(--gold)}
 }
 /* === ARENDE LOGO REVEAL END === */
 
-/* === ARENDE PURPLE LED START === */
-/*
-  Arende Oriri visual balance:
-  Purple leads the brand.
-  Charcoal supports, but does not dominate.
-  Gold is an accent only.
-  Ivory/white provide breathing room.
-*/
+/* === ARENDE COLOUR HARMONY START ===
+   PURPOSE: colour placement only. No layout, hero composition, image,
+   typography sizing, content or animation structure is changed.
 
+   Visual rule:
+   - white / warm ivory = main canvas
+   - charcoal + muted plum = depth, blended together rather than separate slabs
+   - purple = actions + selected emphasis
+   - gold = fine detail only
+   ================================================================ */
 :root{
   --ao-purple:#8B4AB0;
-  --ao-purple-deep:#704080;
-  --ao-purple-muted:#73557C;
-  --ao-purple-soft:#F4EDF7;
-  --ao-charcoal:#5B575A;
-  --ao-charcoal-deep:#454247;
+  --ao-purple-deep:#6D3F7C;
+  --ao-purple-muted:#765C7A;
+  --ao-purple-tint:#F5F0F7;
   --ao-gold:#C79765;
-  --ao-ivory:#FFF6ED;
-  --ao-white:#FFFFFF;
-  --ao-ink:#2B292D;
+  --ao-gold-ink:#8A6139;
+  --ao-gold-tint:#F7EEE5;
+  --ao-ivory:#FFF7F0;
+  --ao-paper:#FFFFFF;
+  --ao-charcoal:#5B575A;
+  --ao-charcoal-deep:#3F3C40;
+  --ao-ink:#2D2A2F;
+  --ao-muted:#6F686F;
+  --ao-line:#E8E0E3;
+  --ao-line-strong:#D2C5CF;
 }
 
-/* ---------------- BASE ---------------- */
-
-body{
-  background:var(--ao-ivory);
-  color:var(--ao-ink);
-}
-
+/* Header stays quiet so the brand palette begins in the content. */
 .site-header{
-  background:rgba(255,246,237,.98) !important;
-  border-bottom-color:rgba(139,74,176,.12) !important;
+  background:rgba(255,255,255,.96);
+  border-bottom-color:rgba(63,60,64,.10);
 }
+.desktop-nav a{color:#504B52}
+.desktop-nav a:after{background:linear-gradient(90deg,var(--ao-purple) 0 74%,var(--ao-gold) 74% 100%)}
+.button-primary{background:var(--ao-purple);border-color:var(--ao-purple);color:#fff}
+.button-primary:hover{background:var(--ao-purple-deep);border-color:var(--ao-purple-deep)}
+.button-outline{border-color:rgba(109,63,124,.55);color:var(--ao-purple-deep)}
+.button-outline:hover{background:var(--ao-purple-tint)}
 
-.desktop-nav a{
-  color:var(--ao-charcoal-deep) !important;
+/* Keep the existing hero and hero image. Only blend the surface behind it. */
+.hero{
+  background:linear-gradient(118deg,#FFF9F4 0%,#FFF7F0 64%,#F3EDF5 100%);
 }
+.hero h1 span{color:var(--ao-purple-deep)}
+.hero .eyebrow{color:var(--ao-purple-deep)}
+.hero .eyebrow-line{background:var(--ao-gold)}
+.hero-visual:before{background:rgba(139,74,176,.08)}
+.hero-visual:after{border-color:rgba(199,151,101,.55)}
+.hero-visual-label{border-top-color:var(--ao-purple)}
+.hero-visual-label span{color:var(--ao-gold-ink)}
+.hero-bottom{border-color:rgba(63,60,64,.10)}
+.hero-bottom span+span{border-color:rgba(63,60,64,.10)}
 
-.desktop-nav a:hover,
-.desktop-nav a:focus-visible{
-  color:var(--ao-purple) !important;
-}
+/* Editorial accents: purple carries emphasis, gold only guides the eye. */
+.eyebrow,.section-kicker{color:var(--ao-purple-deep)}
+.eyebrow-line{background:var(--ao-gold)}
+h2 span{color:var(--ao-purple-deep)}
+.underlined-link,.card-link{color:var(--ao-purple-deep);border-bottom-color:rgba(109,63,124,.28)}
 
-.button-primary{
-  background:var(--ao-purple) !important;
-  border-color:var(--ao-purple) !important;
-  color:var(--ao-white) !important;
-}
+/* White is the reset between stronger brand moments. */
+.about{background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 72%,#FCF8F5 100%)}
+.about-media:before{background:var(--ao-gold-tint)}
+.media-caption{color:var(--ao-gold-ink)}
+.about-facts span{color:var(--ao-purple-deep)}
 
-.button-primary:hover,
-.button-primary:focus-visible{
-  background:var(--ao-purple-deep) !important;
-  border-color:var(--ao-purple-deep) !important;
-}
-
-/* ---------------- HERO ---------------- */
-/* Purple is visibly present, charcoal simply adds depth */
-.hero::after{
-  background:
-    linear-gradient(
-      90deg,
-      rgba(75,53,82,.91) 0%,
-      rgba(104,63,118,.80) 40%,
-      rgba(139,74,176,.46) 68%,
-      rgba(69,66,71,.20) 100%
-    ) !important;
-}
-
-.hero .eyebrow,
-.hero .hero-kicker{
-  color:#E7C9A7 !important;
-}
-
-/* ---------------- LIGHT SECTIONS ---------------- */
-
-.about,
-.team,
-.insights,
-.testimonials,
-.privacy{
-  background:var(--ao-ivory) !important;
-}
-
-.services{
-  background:var(--ao-white) !important;
-}
-
-.eyebrow,
-.section-kicker,
-.page-kicker{
-  color:var(--ao-purple) !important;
-}
-
-.eyebrow-line{
-  background:var(--ao-gold) !important;
-}
-
-h1 span,
-h2 span,
-h3 span{
-  color:var(--ao-gold) !important;
-}
-
-/* ---------------- SERVICES ---------------- */
-
-/* Purple becomes the principal feature-card colour */
-.service-card-dark{
-  background:
-    linear-gradient(145deg,#7D439F 0%,#8B4AB0 58%,#704080 100%) !important;
-  color:var(--ao-white) !important;
-}
-
-.service-card-dark:hover{
-  background:
-    linear-gradient(145deg,#704080 0%,#7F45A0 100%) !important;
-}
-
-.service-card-dark .service-top,
-.service-card-dark h3,
-.service-card-dark .card-link{
-  color:var(--ao-white) !important;
-}
-
-.service-card-dark > p,
-.service-card-dark .service-details span,
-.service-card-dark .service-tags{
-  color:rgba(255,255,255,.80) !important;
-}
-
-/* Other cards stay clean, with quiet purple detailing */
-.services-grid > *:not(.service-card-dark){
-  border-color:rgba(139,74,176,.14) !important;
-}
-
-.services-grid > *:not(.service-card-dark):hover{
-  border-color:rgba(139,74,176,.34) !important;
-}
-
-.insight-card-plain{
-  background:var(--ao-purple-soft) !important;
-}
-
-/* ---------------- BRAND MOTION ---------------- */
-/* Keep only one substantial charcoal anchor in the body */
+/* Charcoal and purple now meet in one identity gradient instead of competing. */
 .brand-motion{
-  background:var(--ao-charcoal) !important;
-  color:var(--ao-white) !important;
+  background:linear-gradient(118deg,#474448 0%,#5B575A 58%,#6B526D 100%);
+  border-top:1px solid rgba(199,151,101,.38);
+  border-bottom:1px solid rgba(139,74,176,.20);
 }
-
-.brand-motion h2,
-.brand-motion p{
-  color:var(--ao-white) !important;
-}
-
-.brand-motion h2 span{
-  color:var(--ao-gold) !important;
-}
-
-.brand-motion .eyebrow{
-  color:#E9D4BF !important;
-}
-
-.brand-motion .eyebrow-line{
-  background:var(--ao-purple) !important;
-}
-
+.brand-motion .eyebrow{color:#E7D0B8}
+.brand-motion h2 span{color:#E6D8E8}
 .brand-motion-media{
-  background:var(--ao-ivory) !important;
-  box-shadow:inset 5px 0 0 rgba(139,74,176,.24);
+  background:linear-gradient(135deg,#FFF7F0 0%,#F7EEE5 100%);
+  border-left:3px solid rgba(199,151,101,.72);
 }
 
-/* ---------------- WAY WE WORK ---------------- */
-/* This is now clearly purple, not grey */
+/* Services sit on a warm neutral field; cards remain disciplined white. */
+.services{background:linear-gradient(180deg,#FCF8F5 0%,#FFF9F4 54%,#F8F3F6 100%)}
+.service-card{position:relative;background:#fff;border-color:var(--ao-line)}
+.service-card:before{
+  content:"";position:absolute;z-index:2;left:-1px;right:-1px;top:-1px;height:3px;
+  background:linear-gradient(90deg,var(--ao-purple) 0 58%,var(--ao-gold) 58% 72%,transparent 72%);
+}
+.service-top{color:var(--ao-gold-ink)}
+.service-symbol{color:var(--ao-purple-deep);border-color:var(--ao-line-strong)}
+
+/* Team blends ivory into a very soft purple wash, rather than a flat beige block. */
+.team{background:#fff}
+.team-feature{
+  background:linear-gradient(105deg,#FFF7F0 0%,#FAF4F3 56%,#F4EDF6 100%);
+  border-color:var(--ao-line);
+}
+.team-roles span{color:var(--ao-purple-deep)}
+
+/* The main dark brand moment is a charcoal-to-plum field, not a hard purple slab. */
 .why-us{
-  background:
-    linear-gradient(135deg,#7B448E 0%,#8B4AB0 55%,#6F4B78 100%) !important;
-  color:var(--ao-white) !important;
+  background:linear-gradient(118deg,#4A464B 0%,#5B505D 36%,#704B78 70%,#6D3F7C 100%);
+  color:#fff;
+  border-top:1px solid rgba(199,151,101,.45);
+  border-bottom:1px solid rgba(139,74,176,.28);
 }
+.why-us .eyebrow,.principles-grid article>span{color:#E7D0B8}
+.section-heading-light>p,.principles-grid p{color:rgba(255,255,255,.76)}
+.principles-grid,.principles-grid article{border-color:rgba(255,255,255,.18)}
 
-.why-us h2,
-.why-us h3,
-.why-us p{
-  color:var(--ao-white) !important;
+/* Insights and experience return to light surfaces. */
+.insights{background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 74%,#FBF8F5 100%)}
+.insight-type,.quote-mark{color:var(--ao-gold-ink)}
+.insight-card-plain{
+  background:linear-gradient(145deg,#F4EDF6 0%,#FFF7F0 100%);
+  border:1px solid rgba(139,74,176,.10);
 }
+.testimonials{background:linear-gradient(180deg,#FBF6F1 0%,#FFF8F2 100%)}
+.testimonial-grid article{background:#fff;border-color:var(--ao-line)}
 
-.why-us h2 span{
-  color:#F1D2B3 !important;
-}
-
-.why-us .eyebrow{
-  color:#F1D2B3 !important;
-}
-
-.why-us .eyebrow-line{
-  background:var(--ao-gold) !important;
-}
-
-/* ---------------- CONTACT ---------------- */
-/* Purple-led with only a charcoal shadow at the far edge */
+/* Contact softly reunites purple + ivory; the form remains neutral. */
 .contact{
-  background:
-    linear-gradient(120deg,
-      #744187 0%,
-      #8B4AB0 54%,
-      #6D506F 82%,
-      #565258 100%
-    ) !important;
-  color:var(--ao-white) !important;
+  background:linear-gradient(135deg,#F3EDF5 0%,#FAF5F3 48%,#FFF7F0 100%);
+  border-top:1px solid rgba(139,74,176,.10);
 }
-
-.contact h2,
-.contact h3,
-.contact p{
-  color:var(--ao-white) !important;
+.contact-list span{color:var(--ao-gold-ink)}
+.enquiry-form{
+  background:#fff;
+  border-color:rgba(45,42,47,.07);
+  border-top:3px solid var(--ao-purple);
 }
+.home-map{background:#fff;border-color:var(--ao-line)}
 
-.contact h2 span{
-  color:#F1D2B3 !important;
-}
-
-.contact-list span{
-  color:#F1D2B3 !important;
-}
-
-.contact .enquiry-form{
-  background:var(--ao-ivory) !important;
-  color:var(--ao-ink) !important;
-  border-top:4px solid var(--ao-gold);
-}
-
-.contact .enquiry-form input,
-.contact .enquiry-form textarea,
-.contact .enquiry-form select{
-  background:var(--ao-white) !important;
-  border-color:rgba(139,74,176,.20) !important;
-}
-
-.contact .enquiry-form input:focus,
-.contact .enquiry-form textarea:focus,
-.contact .enquiry-form select:focus{
-  border-color:var(--ao-purple) !important;
-  box-shadow:0 0 0 2px rgba(139,74,176,.10) !important;
-}
-
-/* ---------------- FOOTER ---------------- */
-/* Charcoal is reserved here as the final anchor */
+/* Footer keeps depth, with a quiet plum finish rather than flat charcoal. */
 .site-footer{
-  background:var(--ao-charcoal-deep) !important;
-  color:var(--ao-white) !important;
+  background:linear-gradient(112deg,#2E2B30 0%,#3B373D 64%,#4B3D4E 100%);
+  border-top:1px solid rgba(199,151,101,.55);
+}
+.footer-links span,.footer-top-link{color:#E7D0B8}
+/* === ARENDE COLOUR HARMONY END === */
+
+/* === ARENDE COLOUR HARMONY FIX V2 START === */
+/* Floating contact rail: purple is the action colour. */
+.rail-whatsapp,
+.rail-whatsapp:hover,
+.rail-whatsapp:focus,
+.rail-whatsapp:active{
+  background:#8B4AB0;
+  color:#fff;
 }
 
-.site-footer a{
-  color:var(--ao-white) !important;
+/* Keep the existing dark photographic hero readable. */
+.hero .eyebrow,
+.hero .eyebrow-light{
+  color:rgba(255,255,255,.90);
+}
+.hero .eyebrow-line{
+  background:#CD8E41;
+}
+.hero h1,
+.hero h1 span{
+  color:#fff;
+}
+.hero-tagline{
+  color:#fff;
+}
+.hero-lede{
+  color:rgba(255,255,255,.80);
+}
+.hero-text-link{
+  color:#fff;
+  border-bottom-color:rgba(255,255,255,.55);
+}
+.hero-text-link:hover{
+  color:#fff;
+  border-bottom-color:#CD8E41;
 }
 
-.site-footer a:hover{
-  color:var(--ao-gold) !important;
+/* The harmony patch made contact light, so its text must also be dark. */
+.contact{
+  color:#2D2A2F;
+}
+.contact .eyebrow,
+.contact .eyebrow-light{
+  color:#6D3F7C;
+}
+.contact .eyebrow-line{
+  background:#CD8E41;
+}
+.contact h2,
+.contact h2 span{
+  color:#2D2A2F;
+}
+.contact-copy>p:not(.eyebrow){
+  color:#6F686F;
+}
+.contact-list{
+  border-top-color:#E3D8DF;
+}
+.contact-list div{
+  border-bottom-color:#E3D8DF;
+}
+.contact-list span{
+  color:#8A6139;
+}
+.contact-list strong,
+.contact-list a{
+  color:#2D2A2F;
+}
+.contact-list a:hover{
+  color:#6D3F7C;
+}
+/* === ARENDE COLOUR HARMONY FIX V2 END === */
+
+/* === ARENDE FINAL THREE FIXES START === */
+/* 1) HERO: keep the approved composition exactly intact.
+   Only shorten the overall photographic hero and let the SAME image crop with cover.
+   Do not move the heading, CTA block, logo treatment or bottom standards. */
+@media (min-width:1021px){
+  .hero{
+    min-height:600px;
+    height:600px;
+  }
+  .hero-grid{
+    min-height:540px;
+    height:540px;
+  }
+  .hero-visual{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    min-height:0;
+  }
+  .hero-visual img{
+    display:block;
+    width:100%;
+    height:100%;
+    min-height:0;
+    object-fit:cover;
+    object-position:center 45%;
+  }
+  .hero-bottom{
+    bottom:0;
+  }
 }
 
-/* ---------------- FLOATING ACTIONS ---------------- */
-
-.rail-toggle{
-  background:var(--ao-charcoal) !important;
-  color:var(--ao-white) !important;
+@media (min-width:681px) and (max-width:1020px){
+  .hero{
+    min-height:570px;
+  }
+  .hero-visual,
+  .hero-visual img{
+    height:100%;
+    min-height:0;
+    object-fit:cover;
+    object-position:center 45%;
+  }
 }
 
-.rail-phone{
-  background:var(--ao-purple) !important;
-  color:var(--ao-white) !important;
+/* Preserve readable photographic-hero text. */
+.hero .eyebrow,.hero .eyebrow-light{color:rgba(255,255,255,.92)}
+.hero h1,.hero h1 span,.hero-tagline{color:#fff}
+.hero-lede{color:rgba(255,255,255,.82)}
+.hero-text-link{color:#fff;border-bottom-color:rgba(255,255,255,.58)}
+
+/* 2) SERVICES: cards 02 and 06 must never become white-on-white.
+   Keep the harmonised white-card treatment and make all content explicit. */
+.service-grid .service-card.service-card-dark,
+.service-grid .service-card.service-card-dark:nth-child(6),
+.service-grid .service-card.service-card-dark:hover,
+.service-grid .service-card.service-card-dark:nth-child(6):hover{
+  background:#fff;
+  color:var(--ao-ink,#2D2A2F);
+  border-color:var(--ao-line,#E8E0E3);
+}
+.service-grid .service-card.service-card-dark .service-top{color:var(--ao-gold-ink,#8A6139)}
+.service-grid .service-card.service-card-dark h3{color:var(--ao-ink,#2D2A2F)}
+.service-grid .service-card.service-card-dark>p,
+.service-grid .service-card.service-card-dark .service-tags,
+.service-grid .service-card.service-card-dark .service-details span{color:var(--ao-muted,#6F686F)}
+.service-grid .service-card.service-card-dark .card-link{color:var(--ao-purple-deep,#6D3F7C)}
+.service-card-image .service-image{display:block;overflow:hidden;background:#EEE9E7}
+.service-card-image .service-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  opacity:1;
+  visibility:visible;
 }
 
-.rail-whatsapp{
-  background:var(--ao-gold) !important;
-  color:var(--ao-white) !important;
+/* 3) Keep the previously requested contrast fixes in force. */
+.rail-whatsapp,.rail-whatsapp:hover,.rail-whatsapp:focus,.rail-whatsapp:active{
+  background:var(--ao-purple,#8B4AB0);
+  color:#fff;
 }
-
-/* ---------------- MOBILE ---------------- */
-
-.mobile-menu{
-  background:var(--ao-purple-deep) !important;
-  color:var(--ao-white) !important;
-}
-
-.mobile-menu a{
-  color:var(--ao-white) !important;
-}
-
-.mobile-menu a:hover{
-  color:#F1D2B3 !important;
-}
-
-/* ---------------- DETAILS ---------------- */
-
-.about-facts span{
-  border-color:rgba(139,74,176,.20) !important;
-}
-
-.team-roles > div:hover{
-  background:rgba(139,74,176,.045);
-}
-
-::selection{
-  background:var(--ao-purple);
-  color:var(--ao-white);
-}
-/* === ARENDE PURPLE LED END === */
+.contact{color:var(--ao-ink,#2D2A2F)}
+.contact .eyebrow,.contact .eyebrow-light{color:var(--ao-purple-deep,#6D3F7C)}
+.contact h2,.contact h2 span{color:var(--ao-ink,#2D2A2F)}
+.contact-copy>p:not(.eyebrow){color:var(--ao-muted,#6F686F)}
+.contact-list strong,.contact-list a{color:var(--ao-ink,#2D2A2F)}
+/* === ARENDE FINAL THREE FIXES END === */

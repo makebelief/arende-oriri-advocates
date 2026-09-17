@@ -181,3 +181,33 @@
 .contact-panel-row span{color:var(--purple)}
 .map-meta{background:var(--charcoal)}
 .error-page,.error-header,.error-main,.error-footer{background:var(--charcoal)}
+
+/* === ARENDE COLOUR HARMONY PAGES START === */
+.page-hero:before{
+  background:linear-gradient(96deg,rgba(46,43,48,.92) 0%,rgba(78,58,81,.72) 48%,rgba(109,63,124,.24) 100%);
+}
+.page-kicker,.page-hero h1 span,.map-meta span,.error-code{color:#E7D0B8}
+/* === ARENDE COLOUR HARMONY PAGES END === */
+
+/* === ARENDE PAGE HERO VISIBILITY FIX V2 START === */
+.page-hero{
+  color:#fff;
+}
+.page-kicker,
+.page-hero .eyebrow,
+.page-hero .eyebrow-light{
+  color:rgba(255,255,255,.92);
+}
+.page-kicker::before,
+.page-hero .eyebrow-line{
+  background:#CD8E41;
+}
+.page-hero h1,
+.page-hero h1 span{
+  color:#fff;
+}
+.page-hero p:not(.eyebrow),
+.page-hero-content>p:last-child{
+  color:rgba(255,255,255,.82);
+}
+/* === ARENDE PAGE HERO VISIBILITY FIX V2 END === */
