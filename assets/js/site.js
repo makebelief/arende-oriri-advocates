@@ -137,10 +137,27 @@ railToggle?.addEventListener('click', () => {
 const arendeBrandReveal = document.querySelector('[data-brand-reveal]');
 
 if (arendeBrandReveal) {
+  const LOOP_MS = 3800;
+  let arendeLoopTimer = null;
+
   const replayBrandReveal = () => {
     arendeBrandReveal.classList.remove('is-animated');
     void arendeBrandReveal.offsetWidth;
     arendeBrandReveal.classList.add('is-animated');
+  };
+
+  const stopBrandLoop = () => {
+    if (arendeLoopTimer) {
+      clearInterval(arendeLoopTimer);
+      arendeLoopTimer = null;
+    }
+  };
+
+  const startBrandLoop = () => {
+    if (reduceMotion) return;
+    stopBrandLoop();
+    replayBrandReveal();
+    arendeLoopTimer = setInterval(replayBrandReveal, LOOP_MS);
   };
 
   if (reduceMotion) {
@@ -148,15 +165,24 @@ if (arendeBrandReveal) {
   } else if ('IntersectionObserver' in window) {
     const arendeBrandObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        replayBrandReveal();
+        startBrandLoop();
       } else {
-        arendeBrandReveal.classList.remove('is-animated');
+        stopBrandLoop();
       }
-    }, { threshold: 0.38 });
+    }, { threshold: 0.25 });
 
     arendeBrandObserver.observe(arendeBrandReveal);
   } else {
-    replayBrandReveal();
+    startBrandLoop();
   }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopBrandLoop();
+    } else if (!reduceMotion) {
+      const rect = arendeBrandReveal.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) startBrandLoop();
+    }
+  });
 }
 /* === ARENDE LOGO REVEAL END === */

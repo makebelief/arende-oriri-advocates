@@ -383,3 +383,162 @@ h2 span{color:var(--gold)}
   .brand-logo-sheen{display:none!important;animation:none!important}
 }
 /* === ARENDE LOGO REVEAL END === */
+
+/* === ARENDE PURPLE EMPHASIS START === */
+/*
+  Arende Oriri official palette:
+  Purple  #8B4AB0
+  Gold    #C79765
+  Ivory   #FFF6ED
+  White   #FFFFFF
+  Charcoal is retained only for normal text, not dominant section backgrounds.
+*/
+
+.brand-motion,
+.why-us,
+.contact{
+  background:#8B4AB0 !important;
+  color:#FFFFFF !important;
+}
+
+.brand-motion h2,
+.brand-motion h3,
+.why-us h2,
+.why-us h3,
+.contact h2,
+.contact h3{
+  color:#FFFFFF !important;
+}
+
+.brand-motion h2 span,
+.why-us h2 span,
+.contact h2 span{
+  color:#FFF6ED !important;
+}
+
+.brand-motion .eyebrow,
+.why-us .eyebrow,
+.contact .eyebrow{
+  color:#F3D7B7 !important;
+}
+
+.brand-motion .eyebrow-line,
+.why-us .eyebrow-line,
+.contact .eyebrow-line{
+  background:#C79765 !important;
+}
+
+.brand-motion-media{
+  background:#FFF6ED !important;
+}
+
+.service-card-dark{
+  background:#8B4AB0 !important;
+  color:#FFFFFF !important;
+}
+
+.service-card-dark:hover{
+  background:#7C3D9F !important;
+}
+
+.service-card-dark .service-top,
+.service-card-dark h3,
+.service-card-dark .card-link{
+  color:#FFFFFF !important;
+}
+
+.service-card-dark > p,
+.service-card-dark .service-details span,
+.service-card-dark .service-tags{
+  color:rgba(255,255,255,.78) !important;
+}
+
+.insight-card-plain{
+  background:#F4EAF8 !important;
+  color:#28272C !important;
+}
+
+.about,
+.team,
+.testimonials,
+.privacy{
+  background:#FFF6ED !important;
+}
+
+.services,
+.insights,
+.site-footer{
+  background:#FFFFFF !important;
+}
+
+.contact .enquiry-form{
+  background:#FFF6ED !important;
+  color:#28272C !important;
+}
+
+.contact .enquiry-form input,
+.contact .enquiry-form select,
+.contact .enquiry-form textarea{
+  background:#FFFFFF !important;
+  border-color:rgba(139,74,176,.22) !important;
+}
+
+.contact .enquiry-form input:focus,
+.contact .enquiry-form select:focus,
+.contact .enquiry-form textarea:focus{
+  border-color:#8B4AB0 !important;
+  box-shadow:0 0 0 2px rgba(139,74,176,.12) !important;
+}
+
+.section-kicker span:first-child,
+.service-top,
+.insight-type,
+.profile-meta > span,
+.contact-list span,
+.footer-links span{
+  color:#C79765 !important;
+}
+
+.rail-toggle,
+.rail-phone{
+  background:#8B4AB0 !important;
+  color:#FFFFFF !important;
+}
+
+.rail-whatsapp{
+  background:#C79765 !important;
+  color:#FFFFFF !important;
+}
+
+.button-primary{
+  background:#8B4AB0 !important;
+  border-color:#8B4AB0 !important;
+  color:#FFFFFF !important;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible{
+  background:#7C3D9F !important;
+  border-color:#7C3D9F !important;
+}
+
+.mobile-menu{
+  background:#8B4AB0 !important;
+  color:#FFFFFF !important;
+}
+
+.privacy{
+  border-top:1px solid rgba(199,151,101,.22);
+  border-bottom:1px solid rgba(199,151,101,.22);
+}
+
+.brand-logo-reveal{
+  overflow:hidden;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .brand-logo-reveal .brand-logo-final{
+    opacity:1 !important;
+  }
+}
+/* === ARENDE PURPLE EMPHASIS END === */
