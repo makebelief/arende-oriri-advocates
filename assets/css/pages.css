@@ -220,3 +220,66 @@
 }
 /* CLIENT-READY KEVIN PORTRAIT */
 .profile-large-image img[src$="kevin-arende-oriri.webp"]{object-fit:cover;object-position:center 14%;}
+
+
+/* === KEVIN PAGE HERO + CONTRAST FIX START === */
+/* Kevin's portrait is square; wide page heroes must anchor from the top or his face is cropped away. */
+.page-hero-image[src$="kevin-arende-oriri-profile.webp"],
+.page-hero-image[src*="kevin-arende-oriri"]{
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Profile cards should also keep Kevin's head and shoulders inside the visible crop. */
+.profile-large-image img[src$="kevin-arende-oriri-profile.webp"],
+.profile-large-image img[src*="kevin-arende-oriri"]{
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Dark/grey hero surfaces need high-contrast wayfinding text. */
+.page-hero .page-kicker,
+.page-hero .eyebrow{
+  color: #FFFFFF !important;
+}
+.page-hero .page-kicker::before,
+.page-hero .eyebrow-line{
+  background: #CD8E41 !important;
+}
+
+/* On pale-grey content surfaces, use the deeper brand purple for readability. */
+.page-main.grey .eyebrow,
+.page-main.grey .section-kicker,
+.page-main.grey .profile-large-copy .eyebrow,
+.grey .eyebrow,
+.grey .section-kicker{
+  color: #6B347F !important;
+}
+
+/* Keep ordinary copy on grey/light surfaces dark enough to read comfortably. */
+.page-main.grey p,
+.grey .profile-large-copy p{
+  color: #4F4B52;
+}
+/* === KEVIN PAGE HERO + CONTRAST FIX END === */
+
+
+/* === CONTACT DARK PANEL CONTRAST FIX START === */
+/* Purple text was too low-contrast on the charcoal contact panel. */
+.contact-layout > div:first-child .eyebrow,
+.contact-layout > div:first-child .contact-panel-row > span,
+.contact-layout > div:first-child h2,
+.contact-layout > div:first-child h2 span,
+.contact-layout > div:first-child .contact-panel-row strong,
+.contact-layout > div:first-child .contact-panel-row a,
+.contact-layout > div:first-child .practice-location,
+.contact-layout > div:first-child .practice-location * {
+  color: #FFFFFF !important;
+}
+
+/* Keep only the thin decorative rule in gold. */
+.contact-layout > div:first-child .eyebrow-line,
+.contact-layout > div:first-child .page-kicker::before {
+  background: #CD8E41 !important;
+}
+/* === CONTACT DARK PANEL CONTRAST FIX END === */

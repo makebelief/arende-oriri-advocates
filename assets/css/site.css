@@ -695,3 +695,15 @@ h2 span{color:var(--ao-purple-deep)}
 }
 /* CLIENT-READY KEVIN PORTRAIT */
 .team-feature-image img[src$="kevin-arende-oriri.webp"]{object-fit:cover;object-position:center 16%;}
+
+
+/* === KEVIN FACE CROP FIX START === */
+/* Keep Kevin's face visible wherever his square portrait is placed in a cropped feature area. */
+.team-feature-image img[src$="kevin-arende-oriri-profile.webp"],
+.team-feature-image img[src*="kevin-arende-oriri"],
+.about-media img[src$="kevin-arende-oriri-profile.webp"],
+.about-media img[src*="kevin-arende-oriri"]{
+  object-fit: cover;
+  object-position: center top;
+}
+/* === KEVIN FACE CROP FIX END === */
