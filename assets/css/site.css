@@ -384,45 +384,41 @@ h2 span{color:var(--gold)}
 }
 /* === ARENDE LOGO REVEAL END === */
 
-/* === ARENDE BALANCED PALETTE START === */
+/* === ARENDE PURPLE LED START === */
 /*
-  Arende Oriri & Associates Advocates
-  Balanced brand system:
-  Charcoal #5B575A  — premium depth
-  Purple   #8B4AB0  — controlled brand emphasis
-  Gold     #C79765  — refined accent
-  Ivory    #FFF6ED  — warmth
-  White    #FFFFFF  — clarity
+  Arende Oriri visual balance:
+  Purple leads the brand.
+  Charcoal supports, but does not dominate.
+  Gold is an accent only.
+  Ivory/white provide breathing room.
 */
 
-/* ---------- GLOBAL RHYTHM ---------- */
 :root{
-  --ao-charcoal:#5B575A;
-  --ao-charcoal-deep:#474448;
   --ao-purple:#8B4AB0;
-  --ao-purple-deep:#764094;
-  --ao-purple-soft:#F3EAF7;
+  --ao-purple-deep:#704080;
+  --ao-purple-muted:#73557C;
+  --ao-purple-soft:#F4EDF7;
+  --ao-charcoal:#5B575A;
+  --ao-charcoal-deep:#454247;
   --ao-gold:#C79765;
-  --ao-gold-soft:#E7D0B8;
   --ao-ivory:#FFF6ED;
   --ao-white:#FFFFFF;
-  --ao-ink:#28272C;
+  --ao-ink:#2B292D;
 }
 
-/* Main canvas stays light and elegant */
+/* ---------------- BASE ---------------- */
+
 body{
   background:var(--ao-ivory);
   color:var(--ao-ink);
 }
 
-/* ---------- HEADER / NAV ---------- */
 .site-header{
-  background:rgba(255,246,237,.97) !important;
-  border-bottom-color:rgba(91,87,90,.14) !important;
+  background:rgba(255,246,237,.98) !important;
+  border-bottom-color:rgba(139,74,176,.12) !important;
 }
 
-.desktop-nav a,
-.mobile-menu a{
+.desktop-nav a{
   color:var(--ao-charcoal-deep) !important;
 }
 
@@ -443,27 +439,26 @@ body{
   border-color:var(--ao-purple-deep) !important;
 }
 
-/* ---------- HERO ---------- */
-/* Preserve the strong dark legal look; use purple only as a subtle undertone */
+/* ---------------- HERO ---------------- */
+/* Purple is visibly present, charcoal simply adds depth */
 .hero::after{
   background:
-    linear-gradient(90deg,
-      rgba(71,68,72,.92) 0%,
-      rgba(71,68,72,.72) 43%,
-      rgba(139,74,176,.14) 72%,
-      rgba(139,74,176,.08) 100%) !important;
+    linear-gradient(
+      90deg,
+      rgba(75,53,82,.91) 0%,
+      rgba(104,63,118,.80) 40%,
+      rgba(139,74,176,.46) 68%,
+      rgba(69,66,71,.20) 100%
+    ) !important;
 }
 
 .hero .eyebrow,
 .hero .hero-kicker{
-  color:var(--ao-gold) !important;
+  color:#E7C9A7 !important;
 }
 
-.hero .button-primary{
-  box-shadow:0 8px 28px rgba(139,74,176,.20);
-}
+/* ---------------- LIGHT SECTIONS ---------------- */
 
-/* ---------- LIGHT SECTIONS ---------- */
 .about,
 .team,
 .insights,
@@ -476,7 +471,6 @@ body{
   background:var(--ao-white) !important;
 }
 
-/* Gold is used for editorial accents, not as a background flood */
 .eyebrow,
 .section-kicker,
 .page-kicker{
@@ -487,91 +481,53 @@ body{
   background:var(--ao-gold) !important;
 }
 
-.section-kicker span:first-child,
-.service-top,
-.insight-type,
-.profile-meta > span,
-.contact-list span,
-.footer-links span{
-  color:var(--ao-gold) !important;
-}
-
 h1 span,
 h2 span,
 h3 span{
   color:var(--ao-gold) !important;
 }
 
-/* ---------- SERVICES / CARDS ---------- */
-/* Keep some charcoal for gravitas */
+/* ---------------- SERVICES ---------------- */
+
+/* Purple becomes the principal feature-card colour */
 .service-card-dark{
-  background:var(--ao-charcoal) !important;
+  background:
+    linear-gradient(145deg,#7D439F 0%,#8B4AB0 58%,#704080 100%) !important;
   color:var(--ao-white) !important;
 }
 
 .service-card-dark:hover{
-  background:var(--ao-charcoal-deep) !important;
+  background:
+    linear-gradient(145deg,#704080 0%,#7F45A0 100%) !important;
 }
 
-/* Use purple as one intentional feature card rather than everywhere */
-.services-grid > *:nth-child(3n){
-  border-top:3px solid var(--ao-purple) !important;
+.service-card-dark .service-top,
+.service-card-dark h3,
+.service-card-dark .card-link{
+  color:var(--ao-white) !important;
 }
 
-.services-grid > *:nth-child(3n) .service-top,
-.services-grid > *:nth-child(3n) .card-link{
-  color:var(--ao-purple) !important;
+.service-card-dark > p,
+.service-card-dark .service-details span,
+.service-card-dark .service-tags{
+  color:rgba(255,255,255,.80) !important;
 }
 
-/* Soft purple for selected pale cards */
+/* Other cards stay clean, with quiet purple detailing */
+.services-grid > *:not(.service-card-dark){
+  border-color:rgba(139,74,176,.14) !important;
+}
+
+.services-grid > *:not(.service-card-dark):hover{
+  border-color:rgba(139,74,176,.34) !important;
+}
+
 .insight-card-plain{
   background:var(--ao-purple-soft) !important;
-  color:var(--ao-ink) !important;
 }
 
-/* ---------- TEAM / PROFILE ---------- */
-.team-feature,
-.profile-large,
-.contact-panel,
-.faq-item{
-  border-color:rgba(199,151,101,.28) !important;
-}
-
-.team-roles > div:hover{
-  background:rgba(139,74,176,.045);
-}
-
-/* ---------- "THE WAY WE WORK" / WHY-US ---------- */
-/* Grey is retained here, but purple is blended into the surface */
-.why-us{
-  background:
-    linear-gradient(135deg,
-      var(--ao-charcoal-deep) 0%,
-      var(--ao-charcoal) 58%,
-      #6D526F 100%) !important;
-  color:var(--ao-white) !important;
-}
-
-.why-us h2,
-.why-us h3,
-.why-us p{
-  color:var(--ao-white) !important;
-}
-
-.why-us h2 span{
-  color:var(--ao-gold) !important;
-}
-
-.why-us .eyebrow{
-  color:var(--ao-gold-soft) !important;
-}
-
-.why-us .eyebrow-line{
-  background:var(--ao-purple) !important;
-}
-
-/* ---------- BRAND MOTION ---------- */
-/* Keep the original premium grey/ivory split; do NOT turn this whole area purple */
+/* ---------------- BRAND MOTION ---------------- */
+/* Keep only one substantial charcoal anchor in the body */
 .brand-motion{
   background:var(--ao-charcoal) !important;
   color:var(--ao-white) !important;
@@ -587,7 +543,7 @@ h3 span{
 }
 
 .brand-motion .eyebrow{
-  color:var(--ao-gold-soft) !important;
+  color:#E9D4BF !important;
 }
 
 .brand-motion .eyebrow-line{
@@ -596,21 +552,45 @@ h3 span{
 
 .brand-motion-media{
   background:var(--ao-ivory) !important;
+  box-shadow:inset 5px 0 0 rgba(139,74,176,.24);
 }
 
-/* Subtle purple edge to tie both halves together */
-.brand-motion-media{
-  box-shadow:inset 4px 0 0 rgba(139,74,176,.22);
+/* ---------------- WAY WE WORK ---------------- */
+/* This is now clearly purple, not grey */
+.why-us{
+  background:
+    linear-gradient(135deg,#7B448E 0%,#8B4AB0 55%,#6F4B78 100%) !important;
+  color:var(--ao-white) !important;
 }
 
-/* ---------- CONTACT ---------- */
-/* Dark grey remains the anchor; purple/gold provide the brand accents */
+.why-us h2,
+.why-us h3,
+.why-us p{
+  color:var(--ao-white) !important;
+}
+
+.why-us h2 span{
+  color:#F1D2B3 !important;
+}
+
+.why-us .eyebrow{
+  color:#F1D2B3 !important;
+}
+
+.why-us .eyebrow-line{
+  background:var(--ao-gold) !important;
+}
+
+/* ---------------- CONTACT ---------------- */
+/* Purple-led with only a charcoal shadow at the far edge */
 .contact{
   background:
     linear-gradient(120deg,
-      var(--ao-charcoal-deep) 0%,
-      var(--ao-charcoal) 70%,
-      #675169 100%) !important;
+      #744187 0%,
+      #8B4AB0 54%,
+      #6D506F 82%,
+      #565258 100%
+    ) !important;
   color:var(--ao-white) !important;
 }
 
@@ -621,20 +601,24 @@ h3 span{
 }
 
 .contact h2 span{
-  color:var(--ao-gold) !important;
+  color:#F1D2B3 !important;
+}
+
+.contact-list span{
+  color:#F1D2B3 !important;
 }
 
 .contact .enquiry-form{
   background:var(--ao-ivory) !important;
   color:var(--ao-ink) !important;
-  border-top:4px solid var(--ao-purple);
+  border-top:4px solid var(--ao-gold);
 }
 
 .contact .enquiry-form input,
 .contact .enquiry-form textarea,
 .contact .enquiry-form select{
   background:var(--ao-white) !important;
-  border-color:rgba(91,87,90,.22) !important;
+  border-color:rgba(139,74,176,.20) !important;
 }
 
 .contact .enquiry-form input:focus,
@@ -644,7 +628,8 @@ h3 span{
   box-shadow:0 0 0 2px rgba(139,74,176,.10) !important;
 }
 
-/* ---------- FOOTER ---------- */
+/* ---------------- FOOTER ---------------- */
+/* Charcoal is reserved here as the final anchor */
 .site-footer{
   background:var(--ao-charcoal-deep) !important;
   color:var(--ao-white) !important;
@@ -658,8 +643,8 @@ h3 span{
   color:var(--ao-gold) !important;
 }
 
-/* ---------- FLOATING CONTACT RAIL ---------- */
-/* Grey base + purple active state + gold WhatsApp-style accent */
+/* ---------------- FLOATING ACTIONS ---------------- */
+
 .rail-toggle{
   background:var(--ao-charcoal) !important;
   color:var(--ao-white) !important;
@@ -675,9 +660,10 @@ h3 span{
   color:var(--ao-white) !important;
 }
 
-/* ---------- MOBILE ---------- */
+/* ---------------- MOBILE ---------------- */
+
 .mobile-menu{
-  background:var(--ao-charcoal-deep) !important;
+  background:var(--ao-purple-deep) !important;
   color:var(--ao-white) !important;
 }
 
@@ -686,21 +672,21 @@ h3 span{
 }
 
 .mobile-menu a:hover{
-  color:var(--ao-gold) !important;
+  color:#F1D2B3 !important;
 }
 
-/* ---------- FINE DETAILS ---------- */
+/* ---------------- DETAILS ---------------- */
+
 .about-facts span{
   border-color:rgba(139,74,176,.20) !important;
 }
 
-.privacy{
-  border-top:1px solid rgba(199,151,101,.22);
-  border-bottom:1px solid rgba(199,151,101,.22);
+.team-roles > div:hover{
+  background:rgba(139,74,176,.045);
 }
 
 ::selection{
   background:var(--ao-purple);
   color:var(--ao-white);
 }
-/* === ARENDE BALANCED PALETTE END === */
+/* === ARENDE PURPLE LED END === */
