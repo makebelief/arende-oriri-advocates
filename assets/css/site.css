@@ -230,7 +230,7 @@ h2 span{color:var(--gold)}
 }
 
 /* === ARENDE LOGO REVEAL START === */
-/* Premium identity reveal: monogram -> divider -> wordmark -> soft gold sheen. */
+/* Arende identity reveal. Every visible logo element comes from the official logo artwork. */
 .brand-motion-media{
   position:relative;
   display:grid;
@@ -271,30 +271,24 @@ h2 span{color:var(--gold)}
   will-change:opacity,transform,clip-path;
 }
 
+/* The official PNG is 1985px wide. Its real divider is at x≈832 (41.9%). */
 .brand-logo-monogram{
-  clip-path:inset(0 51% 0 0);
+  clip-path:inset(0 58.7% 0 0);
   transform:translateY(10px) scale(.985);
-  transform-origin:34% 50%;
+  transform-origin:28% 50%;
+}
+
+/* This layer contains ONLY the divider already present in the official logo. */
+.brand-logo-divider-image{
+  z-index:3;
+  clip-path:inset(0 57.25% 0 41.15%);
+  transform:scaleY(0);
+  transform-origin:42% 7%;
 }
 
 .brand-logo-wordmark{
-  clip-path:inset(0 51% 0 49%);
+  clip-path:inset(0 56.7% 0 43.3%);
   transform:translateX(18px);
-}
-
-.brand-logo-divider{
-  position:absolute;
-  z-index:3;
-  left:48.55%;
-  top:6.5%;
-  width:2px;
-  height:87%;
-  border-radius:999px;
-  background:#c79765;
-  opacity:0;
-  transform:scaleY(0);
-  transform-origin:50% 0;
-  box-shadow:0 0 18px rgba(199,151,101,.18);
 }
 
 .brand-logo-sheen{
@@ -306,9 +300,9 @@ h2 span{color:var(--gold)}
   background:linear-gradient(
     105deg,
     transparent 34%,
-    rgba(255,255,255,.18) 44%,
-    rgba(255,238,211,.92) 50%,
-    rgba(255,255,255,.24) 56%,
+    rgba(255,255,255,.16) 44%,
+    rgba(255,238,211,.82) 50%,
+    rgba(255,255,255,.20) 56%,
     transparent 66%
   );
   background-size:260% 100%;
@@ -318,29 +312,29 @@ h2 span{color:var(--gold)}
 }
 
 .brand-logo-reveal.is-animated .brand-logo-monogram{
-  animation:aoMonogramIn .68s cubic-bezier(.2,.7,.2,1) both;
+  animation:
+    aoMonogramIn .68s cubic-bezier(.2,.7,.2,1) both,
+    aoPartsOut .18s ease 1.72s forwards;
 }
 
-.brand-logo-reveal.is-animated .brand-logo-divider{
-  animation:aoDividerDraw .52s cubic-bezier(.2,.7,.2,1) .46s both;
+.brand-logo-reveal.is-animated .brand-logo-divider-image{
+  animation:
+    aoDividerDraw .52s cubic-bezier(.2,.7,.2,1) .46s both,
+    aoPartsOut .18s ease 1.72s forwards;
 }
 
 .brand-logo-reveal.is-animated .brand-logo-wordmark{
-  animation:aoWordmarkReveal .82s cubic-bezier(.18,.75,.2,1) .82s both;
+  animation:
+    aoWordmarkReveal .82s cubic-bezier(.18,.75,.2,1) .82s both,
+    aoPartsOut .18s ease 1.72s forwards;
 }
 
 .brand-logo-reveal.is-animated .brand-logo-final{
-  animation:aoFinalLogo .22s ease 1.72s both;
-}
-
-.brand-logo-reveal.is-animated .brand-logo-monogram,
-.brand-logo-reveal.is-animated .brand-logo-wordmark,
-.brand-logo-reveal.is-animated .brand-logo-divider{
-  animation-fill-mode:both;
+  animation:aoFinalLogo .22s ease 1.68s both;
 }
 
 .brand-logo-reveal.is-animated .brand-logo-sheen{
-  animation:aoGoldSheen .82s ease-in-out 1.88s both;
+  animation:aoGoldSheen .82s ease-in-out 1.92s both;
 }
 
 @keyframes aoMonogramIn{
@@ -355,9 +349,9 @@ h2 span{color:var(--gold)}
 }
 
 @keyframes aoWordmarkReveal{
-  0%{opacity:0;clip-path:inset(0 51% 0 49%);transform:translateX(18px)}
+  0%{opacity:0;clip-path:inset(0 56.7% 0 43.3%);transform:translateX(18px)}
   20%{opacity:1}
-  100%{opacity:1;clip-path:inset(0 0 0 49%);transform:translateX(0)}
+  100%{opacity:1;clip-path:inset(0 0 0 43.3%);transform:translateX(0)}
 }
 
 @keyframes aoFinalLogo{
@@ -365,23 +359,27 @@ h2 span{color:var(--gold)}
   to{opacity:1}
 }
 
+@keyframes aoPartsOut{
+  from{opacity:1}
+  to{opacity:0}
+}
+
 @keyframes aoGoldSheen{
   0%{opacity:0;background-position:130% 0}
-  18%{opacity:.7}
-  72%{opacity:.34}
+  18%{opacity:.58}
+  72%{opacity:.26}
   100%{opacity:0;background-position:-35% 0}
 }
 
 @media (max-width:680px){
   .brand-logo-reveal{width:90%}
-  .brand-logo-divider{width:1.5px}
 }
 
 @media (prefers-reduced-motion:reduce){
   .brand-logo-final{opacity:1!important;animation:none!important}
   .brand-logo-monogram,
   .brand-logo-wordmark,
-  .brand-logo-divider,
+  .brand-logo-divider-image,
   .brand-logo-sheen{display:none!important;animation:none!important}
 }
 /* === ARENDE LOGO REVEAL END === */
