@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arende Publisher</title>
+  <link rel="icon" href="../images/arende-oriri-mark.png">
+  <link rel="stylesheet" href="../assets/css/cms.css">
+</head>
+<body class="cms-admin-body simple-publisher-body">
+
+  <div id="login-view" class="simple-login">
+    <form id="login-form" class="simple-login-card">
+      <img src="../images/arende-oriri-logo.png" alt="Arende Oriri & Associates Advocates">
+      <h1>Website Publisher</h1>
+      <p>Sign in to post an article, news update or video.</p>
+      <div id="login-notice" class="cms-notice cms-hidden"></div>
+
+      <label for="login-email">Email</label>
+      <input id="login-email" type="email" autocomplete="username" required>
+
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password" autocomplete="current-password" required>
+
+      <button id="login-btn" class="simple-primary-btn" type="submit">Sign in</button>
+    </form>
+  </div>
+
+  <div id="app-view" class="simple-app cms-hidden">
+    <header class="simple-topbar">
+      <div class="simple-brand">
+        <img src="../images/arende-oriri-logo.png" alt="Arende Oriri & Associates Advocates">
+      </div>
+      <div class="simple-top-actions">
+        <a href="../insights.html" target="_blank" rel="noopener">View website</a>
+        <button id="logout-btn" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <main class="simple-main">
+      <div id="app-notice" class="cms-notice cms-hidden"></div>
+
+      <section id="posts-view">
+        <div class="simple-page-head">
+          <div>
+            <span class="simple-kicker">INSIGHTS & MEDIA</span>
+            <h1>Your posts</h1>
+            <p>Write it, add an image if you want, then publish.</p>
+          </div>
+          <button id="new-post" type="button" class="simple-primary-btn">＋ Create a post</button>
+        </div>
+
+        <div id="posts-list" class="simple-post-list"></div>
+      </section>
+
+      <section id="editor-view" class="cms-hidden">
+        <button id="back-to-posts" type="button" class="simple-back">← Back to posts</button>
+
+        <form id="post-form" class="simple-editor">
+          <input id="post-id" type="hidden">
+
+          <div class="simple-editor-head">
+            <div>
+              <span class="simple-kicker">WEBSITE POST</span>
+              <h1 id="editor-heading">Create a post</h1>
+            </div>
+          </div>
+
+          <div class="simple-field">
+            <label>What are you posting?</label>
+            <div class="simple-type-picker" role="radiogroup" aria-label="Post type">
+              <label>
+                <input type="radio" name="post-type" value="article" checked>
+                <span><strong>Article</strong><small>Commentary or legal insight</small></span>
+              </label>
+              <label>
+                <input type="radio" name="post-type" value="news">
+                <span><strong>News</strong><small>Firm or case update</small></span>
+              </label>
+              <label>
+                <input type="radio" name="post-type" value="video">
+                <span><strong>Video</strong><small>YouTube or Vimeo</small></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="simple-field">
+            <label for="post-title">Title</label>
+            <input id="post-title" class="simple-title-input" required
+                   placeholder="e.g. Understanding public interest litigation in Kenya">
+          </div>
+
+          <div class="simple-field">
+            <label for="cover-file">Cover image <span>Optional</span></label>
+            <label class="simple-upload" for="cover-file">
+              <div id="cover-preview" class="simple-cover-preview">
+                <strong>Add a cover image</strong>
+                <small>Click here to choose a JPG, PNG or WebP image.</small>
+              </div>
+            </label>
+            <input id="cover-file" class="simple-file-input" type="file"
+                   accept="image/jpeg,image/png,image/webp">
+          </div>
+
+          <div id="video-field" class="simple-field cms-hidden">
+            <label for="post-video">Video link</label>
+            <input id="post-video" type="url"
+                   placeholder="Paste a YouTube or Vimeo link">
+          </div>
+
+          <div class="simple-field">
+            <label>Write your post</label>
+            <div class="simple-toolbar">
+              <button type="button" data-rich="bold"><strong>B</strong></button>
+              <button type="button" data-rich="h2">Heading</button>
+              <button type="button" data-rich="insertUnorderedList">• List</button>
+              <button type="button" data-rich="link">Link</button>
+            </div>
+            <div id="rich-editor" class="simple-rich-editor" contenteditable="true"
+                 data-placeholder="Start writing here..."></div>
+          </div>
+
+          <div class="simple-publish-bar">
+            <button id="save-draft" type="button" class="simple-secondary-btn">Save draft</button>
+            <button id="publish-post" type="button" class="simple-primary-btn">Publish to website</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/cms-config.js"></script>
+  <script src="../assets/js/cms-admin.js"></script>
+</body>
+</html>

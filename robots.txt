@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /admin/
 Allow: /
 
 Sitemap: https://arende-oriri-advocates.vercel.app/sitemap.xml
+Sitemap: https://arende-oriri-advocates.vercel.app/sitemap-posts.xml
